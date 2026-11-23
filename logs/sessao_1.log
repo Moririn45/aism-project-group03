@@ -1,0 +1,56 @@
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+--- 2026-11-23T19:56:15 · pasta de dados: demo\estado
+[arranque] Não há perfil guardado: aluno novo.
+
+[Avaliador] Diagnóstico inicial de Matemática: 4 perguntas curtas.
+  Pergunta 1 (Números inteiros): Quanto é (-3) + 8?
+  Resposta do aluno (simulado): 5
+[Avaliador] Pergunta 1: certa
+  Pergunta 2 (Números inteiros): Quanto é (-4) × (-6)?
+  Resposta do aluno (simulado): 24
+[Avaliador] Pergunta 2: certa
+  Pergunta 3 (Frações): Quanto é 1/2 + 1/4? Responde com uma fração.
+  Resposta do aluno (simulado): 7/4
+[Avaliador] Pergunta 3: errada (resposta certa: 3/4)
+  Pergunta 4 (Frações): Quanto é 2/3 de 9?
+  Resposta do aluno (simulado): 7
+[Avaliador] Pergunta 4: errada (resposta certa: 6)
+[Avaliador] Resultado do diagnóstico: Números inteiros 2/2 -> solid; Frações 0/2 -> weak. Perfil criado e gravado.
+
+--- Sessão 1 · Ana · Matemática ---
+[Planeador] Avanço para Equações: é o próximo tópico novo (Frações está fraco, mas esta é só a 1.ª sessão; revejo-o na sessão 3).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Equações, modo=avancar
+
+[Professor] Aula sobre Equações (tópico novo). A preparar com o modelo local...
+  Explicação: Uma equação é uma igualdade matemática que tem uma variável (incógnita) e uma
+    ou mais constantes. Para resolver uma equação do 1.º grau com uma incógnita, devemos
+    isolar a variável. Neste caso, temos 3x + 5 = 20. Para resolver x, começamos subtraindo
+    5 de ambos os lados, o que nos dá 3x = 15. Em seguida, dividimos ambos os lados pela 3,
+    o que nos dá x = 5.
+  Exemplo resolvido: 3x + 5 = 17
+  Resolução: 3x + 5 = 17  3x = 12   x = 4
+  Agora é a tua vez.
+  Pergunta 1: Qual é o valor de x em 2x - 4 = 12?
+  Resposta do aluno (simulado): 8
+  Pergunta 2: Resolva a equação 2x + 1 = 9
+  Resposta do aluno (simulado): 4
+  [mensagem] Professor -> Avaliador · REQUEST · avaliar 2 respostas sobre Equações
+
+[Avaliador] Pergunta 1: certa
+[Avaliador] Pergunta 2: certa
+[Avaliador] Equações: novo -> improving (2/2). Perfil gravado; a próxima é a sessão 2.
+  [mensagem] Avaliador -> Planeador · INFORM · Equações: novo -> improving (2/2)
+
+Estado de Ana no fim da sessão 1:
+  Tópico                  Estado      Visto pela última vez
+  Números inteiros        solid       sessão 1
+  Frações                 weak        sessão 1
+  Equações                improving   sessão 1
+  Funções                 -           -
+  Percentagens            -           -
+  Teorema de Pitágoras    -           -
+
+Fim da sessão 1. Próxima: sessão 2. O programa termina aqui; volta a correr `python main.py` para continuar.

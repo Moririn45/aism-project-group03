@@ -1,0 +1,14 @@
+# segredos e ambiente local (nunca enviar para o GitHub)
+.env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# perfis de alunos reais e cópias temporárias dos testes
+data/
+data_*/
+demo/estado_testes/
+*.tmp

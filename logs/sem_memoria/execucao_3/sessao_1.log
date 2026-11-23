@@ -1,0 +1,57 @@
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+--- 2026-11-23T19:57:24 · pasta de dados: demo\estado_testes\sem_memoria
+[arranque] Não há perfil guardado: aluno novo.
+
+[Avaliador] Diagnóstico inicial de Matemática: 4 perguntas curtas.
+  Pergunta 1 (Números inteiros): Quanto é (-3) + 8?
+  Resposta do aluno (simulado): 5
+[Avaliador] Pergunta 1: certa
+  Pergunta 2 (Números inteiros): Quanto é (-4) × (-6)?
+  Resposta do aluno (simulado): 24
+[Avaliador] Pergunta 2: certa
+  Pergunta 3 (Frações): Quanto é 1/2 + 1/4? Responde com uma fração.
+  Resposta do aluno (simulado): 7/4
+[Avaliador] Pergunta 3: errada (resposta certa: 3/4)
+  Pergunta 4 (Frações): Quanto é 2/3 de 9?
+  Resposta do aluno (simulado): 7
+[Avaliador] Pergunta 4: errada (resposta certa: 6)
+[Avaliador] Resultado do diagnóstico: Números inteiros 2/2 -> solid; Frações 0/2 -> weak. Perfil criado e gravado.
+
+--- Sessão 1 · Ana · Matemática ---
+[Planeador] Avanço para Equações: é o próximo tópico novo (Frações está fraco, mas esta é só a 1.ª sessão; revejo-o na sessão 3).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Equações, modo=avancar
+
+[Professor] Aula sobre Equações (tópico novo). A preparar com o modelo local...
+  Explicação: Uma equação do primeiro grau é uma equação que contém uma incógnita, como x, e
+    pode ser resolvida usando uma operação simples. Para resolver uma equação do primeiro
+    grau, podemos começar isolando a incógnita, adicionando ou subtraindo o mesmo valor de
+    cada lado da equação, e finalmente dividindo por um fator constante. Por exemplo, se
+    temos 3x + 5 = 20, podemos começar a resolver a equação seguindo os passos: 3x = 20 - 5,
+    3x = 15, x = 15/3, x = 5.
+  Exemplo resolvido: Resolva 2x + 4 = 12
+  Resolução: 2x = 12 - 4, 2x = 8, x = 8/2, x = 4
+  Agora é a tua vez.
+  Pergunta 1: Qual é o valor de x se 2x - 1 = 5?
+  Resposta do aluno (simulado): 4
+  Pergunta 2: Se x + 2 = 9, qual é o valor de x?
+  Resposta do aluno (simulado): 7
+  [mensagem] Professor -> Avaliador · REQUEST · avaliar 2 respostas sobre Equações
+
+[Avaliador] Pergunta 1: certa
+[Avaliador] Pergunta 2: certa
+[Avaliador] Equações: novo -> improving (2/2). Perfil gravado; a próxima é a sessão 2.
+  [mensagem] Avaliador -> Planeador · INFORM · Equações: novo -> improving (2/2)
+
+Estado de Ana no fim da sessão 1:
+  Tópico                  Estado      Visto pela última vez
+  Números inteiros        solid       sessão 1
+  Frações                 weak        sessão 1
+  Equações                improving   sessão 1
+  Funções                 -           -
+  Percentagens            -           -
+  Teorema de Pitágoras    -           -
+
+Fim da sessão 1. Próxima: sessão 2. O programa termina aqui; volta a correr `python main.py` para continuar.

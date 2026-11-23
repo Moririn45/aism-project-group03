@@ -1,0 +1,12 @@
+{
+  "nome": "Ana",
+  "disciplina": "matematica",
+  "descricao": "Aluna simulada da demonstração (Figura 2 do relatório): domina os números inteiros, erra as duas perguntas de frações no diagnóstico e acerta as duas perguntas de cada aula.",
+  "diagnostico": {
+    "Números inteiros": [true, true],
+    "Frações": [false, false]
+  },
+  "aulas": {
+    "por_defeito": [true, true]
+  }
+}

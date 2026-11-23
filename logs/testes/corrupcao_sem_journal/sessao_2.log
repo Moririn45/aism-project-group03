@@ -1,0 +1,43 @@
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+[recuperação] profile.json inválido (JSON inválido na linha 81); isolado em profile.corrupt.json.
+[recuperação] Restaurado o último backup válido (profile.bak.json, sessão 2).
+--- 2026-11-23T19:58:22 · pasta de dados: demo\estado_testes\corrupcao_sem_journal
+[arranque] Perfil de Ana válido (sessão 2). A continuar onde ficou.
+
+--- Sessão 2 · Ana · Matemática ---
+[Planeador] Avanço para Funções: é o próximo tópico novo (Frações está fraco, mas esta é só a 2.ª sessão; revejo-o na sessão 3).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Funções, modo=avancar
+
+[Professor] Aula sobre Funções (tópico novo). A preparar com o modelo local...
+  Explicação: Uma função é uma relação entre dois conjuntos, um conjunto de entrada (os x) e
+    outro conjunto de saída (as y). A fórmula de uma função afim é f(x) = ax + b, onde a e b
+    são números reais. Esta fórmula representa uma linha reta no plano cartesiano, e a
+    imagem de um ponto (x, y) é o valor de y quando x é igual ao valor de entrada. A imagem
+    de um objeto é o resultado da aplicação da função ao objeto, ou seja, f(objeto).
+  Exemplo resolvido: Encontre a imagem de um objeto com x = 2 e f(x) = 2x + 1
+  Resolução: 3
+  Agora é a tua vez.
+  Pergunta 1: Qual é o valor de f(0) em f(x) = 2x + 1?
+  Resposta do aluno (simulado): 1
+  Pergunta 2: Qual é o valor de f(-1) em f(x) = 2x + 1?
+  Resposta do aluno (simulado): -3
+  [mensagem] Professor -> Avaliador · REQUEST · avaliar 2 respostas sobre Funções
+
+[Avaliador] Pergunta 1: certa
+[Avaliador] Pergunta 2: certa
+[Avaliador] Funções: novo -> improving (2/2). Perfil gravado; a próxima é a sessão 3.
+  [mensagem] Avaliador -> Planeador · INFORM · Funções: novo -> improving (2/2)
+
+Estado de Ana no fim da sessão 2:
+  Tópico                  Estado      Visto pela última vez
+  Números inteiros        solid       sessão 1
+  Frações                 weak        sessão 1
+  Equações                improving   sessão 1
+  Funções                 improving   sessão 2
+  Percentagens            -           -
+  Teorema de Pitágoras    -           -
+
+Fim da sessão 2. Próxima: sessão 3. O programa termina aqui; volta a correr `python main.py` para continuar.

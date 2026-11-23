@@ -1,0 +1,13 @@
+{
+  "nome": "Ana",
+  "disciplina": "matematica",
+  "descricao": "Igual à aluno_ana.json, mas fecha o programa ao chegar à 2.ª pergunta da aula (teste de interrupção a meio da sessão).",
+  "diagnostico": {
+    "Números inteiros": [true, true],
+    "Frações": [false, false]
+  },
+  "aulas": {
+    "por_defeito": [true, true]
+  },
+  "interromper_na_pergunta": 2
+}

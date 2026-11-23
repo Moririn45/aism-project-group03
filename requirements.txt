@@ -1,0 +1,2 @@
+# Única dependência externa: cliente Python do Ollama (o resto é biblioteca padrão).
+ollama>=0.4

@@ -1,0 +1,299 @@
+{
+  "model": "llama3.2",
+  "memory": [
+    {
+      "session": 1,
+      "topic": "Equações",
+      "mode": "avancar",
+      "reason": "Avanço para Equações: é o próximo tópico novo (Frações está fraco, mas esta é só a 1.ª sessão; revejo-o na sessão 3).",
+      "state": {
+        "Números inteiros": "solid",
+        "Frações": "weak",
+        "Equações": "improving",
+        "Funções": null,
+        "Percentagens": null,
+        "Teorema de Pitágoras": null
+      },
+      "seconds": 15.5
+    },
+    {
+      "session": 2,
+      "topic": "Funções",
+      "mode": "avancar",
+      "reason": "Avanço para Funções: é o próximo tópico novo (Frações está fraco, mas esta é só a 2.ª sessão; revejo-o na sessão 3).",
+      "state": {
+        "Números inteiros": "solid",
+        "Frações": "weak",
+        "Equações": "improving",
+        "Funções": "improving",
+        "Percentagens": null,
+        "Teorema de Pitágoras": null
+      },
+      "seconds": 15.2
+    },
+    {
+      "session": 3,
+      "topic": "Frações",
+      "mode": "rever",
+      "reason": "Revejo Frações: está fraco desde a sessão 1 e esta já é a 3.ª sessão (regra das 3 sessões).",
+      "state": {
+        "Números inteiros": "solid",
+        "Frações": "improving",
+        "Equações": "improving",
+        "Funções": "improving",
+        "Percentagens": null,
+        "Teorema de Pitágoras": null
+      },
+      "seconds": 13.4
+    }
+  ],
+  "baseline": [
+    {
+      "run": 1,
+      "code": 0,
+      "topic": "Equações",
+      "mode": "avancar",
+      "diagnostic": true,
+      "seconds": 11.4
+    },
+    {
+      "run": 2,
+      "code": 0,
+      "topic": "Equações",
+      "mode": "avancar",
+      "diagnostic": true,
+      "seconds": 12.9
+    },
+    {
+      "run": 3,
+      "code": 0,
+      "topic": "Equações",
+      "mode": "avancar",
+      "diagnostic": true,
+      "seconds": 12.9
+    }
+  ],
+  "comparison": [
+    {
+      "metric": "Diagnósticos feitos",
+      "baseline": 3,
+      "system": 1
+    },
+    {
+      "metric": "Perguntas de diagnóstico feitas",
+      "baseline": 12,
+      "system": 4
+    },
+    {
+      "metric": "Tópicos novos ensinados",
+      "baseline": 1,
+      "system": 2
+    },
+    {
+      "metric": "Aulas repetidas do mesmo tópico novo",
+      "baseline": 2,
+      "system": 0
+    },
+    {
+      "metric": "Sessão 3 revê Frações (reflete a sessão 1)",
+      "baseline": false,
+      "system": true
+    }
+  ],
+  "recovery": [
+    {
+      "scenario": "corrupcao",
+      "fault": "profile.json cortado a meio",
+      "code": 0,
+      "played_session": 3,
+      "expected_session": 3,
+      "topic": "Frações",
+      "sessions_lost": 0,
+      "isolated": [
+        "profile.corrupt.json"
+      ],
+      "notes": [
+        "profile.json inválido (JSON inválido na linha 81); isolado em profile.corrupt.json.",
+        "Restaurado o último backup válido (profile.bak.json, sessão 2).",
+        "Repostos 3 eventos do journal que o backup ainda não tinha (o perfil ficou em dia: sessão 3)."
+      ],
+      "handled": true,
+      "same_decision": true
+    },
+    {
+      "scenario": "adulteracao",
+      "fault": "Frações mudado para solid sem atualizar o checksum",
+      "code": 0,
+      "played_session": 3,
+      "expected_session": 3,
+      "topic": "Frações",
+      "sessions_lost": 0,
+      "isolated": [
+        "profile.corrupt.json"
+      ],
+      "notes": [
+        "profile.json inválido (o checksum não corresponde ao conteúdo (ficheiro adulterado ou corrompido)); isolado em profile.corrupt.json.",
+        "Restaurado o último backup válido (profile.bak.json, sessão 2).",
+        "Repostos 3 eventos do journal que o backup ainda não tinha (o perfil ficou em dia: sessão 3)."
+      ],
+      "handled": true,
+      "same_decision": true
+    },
+    {
+      "scenario": "remocao",
+      "fault": "profile.json apagado",
+      "code": 0,
+      "played_session": 3,
+      "expected_session": 3,
+      "topic": "Frações",
+      "sessions_lost": 0,
+      "isolated": [],
+      "notes": [
+        "profile.json não existe (foi apagado).",
+        "Restaurado o último backup válido (profile.bak.json, sessão 2).",
+        "Repostos 3 eventos do journal que o backup ainda não tinha (o perfil ficou em dia: sessão 3)."
+      ],
+      "handled": true,
+      "same_decision": true
+    },
+    {
+      "scenario": "remocao_com_backup",
+      "fault": "profile.json e profile.bak.json apagados",
+      "code": 0,
+      "played_session": 3,
+      "expected_session": 3,
+      "topic": "Frações",
+      "sessions_lost": 0,
+      "isolated": [],
+      "notes": [
+        "profile.json não existe (foi apagado).",
+        "Perfil reconstruído a partir do journal (history.jsonl, 8 eventos)."
+      ],
+      "handled": true,
+      "same_decision": true
+    },
+    {
+      "scenario": "corrupcao_sem_journal",
+      "fault": "profile.json cortado e history.jsonl apagado",
+      "code": 0,
+      "played_session": 2,
+      "expected_session": 3,
+      "topic": "Funções",
+      "sessions_lost": 1,
+      "isolated": [
+        "profile.corrupt.json"
+      ],
+      "notes": [
+        "profile.json inválido (JSON inválido na linha 81); isolado em profile.corrupt.json.",
+        "Restaurado o último backup válido (profile.bak.json, sessão 2)."
+      ],
+      "handled": true,
+      "same_decision": false
+    },
+    {
+      "scenario": "tudo_corrompido",
+      "fault": "perfil, backup e journal com lixo",
+      "code": 0,
+      "played_session": 1,
+      "expected_session": 3,
+      "topic": "Equações",
+      "sessions_lost": 2,
+      "isolated": [
+        "history.corrupt.jsonl",
+        "profile.bak.corrupt.json",
+        "profile.corrupt.json"
+      ],
+      "notes": [
+        "profile.json inválido (JSON inválido na linha 1); isolado em profile.corrupt.json.",
+        "O backup também é inválido (JSON inválido na linha 1); isolado em profile.bak.corrupt.json.",
+        "Não há nada válido para recuperar: o diagnóstico vai ser repetido.",
+        "Não foi possível recuperar o perfil: o diagnóstico vai ser repetido.",
+        "O journal não batia certo com o perfil; isolado em history.corrupt.jsonl e reescrito."
+      ],
+      "handled": true,
+      "same_decision": false
+    },
+    {
+      "scenario": "interrupcao",
+      "fault": "programa fechado a meio da aula da sessão 2",
+      "code": 130,
+      "played_session": 3,
+      "expected_session": 3,
+      "topic": "Frações",
+      "sessions_lost": 0,
+      "isolated": [],
+      "notes": [
+        "perfil intacto; a sessão 2 repetiu-se"
+      ],
+      "handled": true,
+      "same_decision": true
+    },
+    {
+      "scenario": "modelo_inexistente",
+      "fault": "--model com um modelo que não existe",
+      "code": 2,
+      "played_session": null,
+      "expected_session": null,
+      "topic": null,
+      "sessions_lost": 0,
+      "isolated": [],
+      "notes": [
+        "[erro] O modelo 'modelo-que-nao-existe' não está instalado. Corre: ollama pull modelo-que-nao-existe"
+      ],
+      "handled": true,
+      "same_decision": null
+    }
+  ],
+  "unit_tests": {
+    "tests": 36,
+    "seconds": 0.642,
+    "ok": true,
+    "tail": [
+      "OK"
+    ]
+  },
+  "llm": {
+    "model": "llama3.2",
+    "sessions": 16,
+    "sessions_ok": 14,
+    "lessons_failed": 0,
+    "mean_session_seconds": 12.39,
+    "max_session_seconds": 15.52,
+    "mean_llm_seconds": 10.73,
+    "mean_llm_calls": 1,
+    "first_try_lessons_pct": 100.0,
+    "mean_teacher_attempts": 1,
+    "llm_failures": 0
+  },
+  "checks": [
+    [
+      "Sessão 1 avança para Equações",
+      true
+    ],
+    [
+      "Sessão 2 avança para Funções",
+      true
+    ],
+    [
+      "Sessão 3 revê Frações por causa da sessão 1",
+      true
+    ],
+    [
+      "Sem memória, a sessão 3 não revê Frações",
+      true
+    ],
+    [
+      "Nenhum cenário de falha terminou com erro sem tratamento",
+      true
+    ],
+    [
+      "Corrupção, adulteração e remoção: a sessão 3 revê Frações",
+      true
+    ],
+    [
+      "Testes unitários passaram",
+      true
+    ]
+  ],
+  "total_seconds": 192.1
+}

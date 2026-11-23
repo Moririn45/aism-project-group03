@@ -1,0 +1,42 @@
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+--- 2026-11-23T19:59:08 · pasta de dados: demo\estado_testes\interrupcao
+[arranque] Perfil de Ana válido (sessão 3). A continuar onde ficou.
+
+--- Sessão 3 · Ana · Matemática ---
+[Planeador] Revejo Frações: está fraco desde a sessão 1 e esta já é a 3.ª sessão (regra das 3 sessões).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Frações, modo=rever
+
+[Professor] Aula sobre Frações (revisão). A preparar com o modelo local...
+  Explicação: Uma fração é uma parte de um todo. Para sumar ou subtrair frações, temos que
+    ter o mesmo denominador. A fração de uma quantidade é calculada dividindo a quantidade
+    por 1. Por exemplo, se tem 1/2 de um lanche, é igual a 2 x 1/2 = 1.
+  Exemplo resolvido: Sumar 1/4 e 1/8
+  Resolução: Primeiro, encontrem o denominador comum, que é 8. Em seguida, multipliquem o
+    numerador e o denominador de cada fração pelo número necessário para que o denominador
+    seja 8. Depois, somem os numeradores e mantêm o denominador. 1/4 x 2/2 = 2/8, 1/8 x 1/1
+    = 1/8. Somam os numeradores: 2 + 1 = 3. O resultado é 3/8.
+  Agora é a tua vez.
+  Pergunta 1: Qual é o valor de 1/2 + 1/4?
+  Resposta do aluno (simulado): 3/4
+  Pergunta 2: Se tem 3/4 de uma lancheira, quantos terços tem?
+  Resposta do aluno (simulado): 1
+  [mensagem] Professor -> Avaliador · REQUEST · avaliar 2 respostas sobre Frações
+
+[Avaliador] Pergunta 1: certa
+[Avaliador] Pergunta 2: certa
+[Avaliador] Frações: weak -> improving (2/2). Perfil gravado; a próxima é a sessão 4.
+  [mensagem] Avaliador -> Planeador · INFORM · Frações: weak -> improving (2/2)
+
+Estado de Ana no fim da sessão 3:
+  Tópico                  Estado      Visto pela última vez
+  Números inteiros        solid       sessão 1
+  Frações                 improving   sessão 3
+  Equações                improving   sessão 1
+  Funções                 improving   sessão 2
+  Percentagens            -           -
+  Teorema de Pitágoras    -           -
+
+Fim da sessão 3. Próxima: sessão 4. O programa termina aqui; volta a correr `python main.py` para continuar.

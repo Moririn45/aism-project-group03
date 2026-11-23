@@ -1,0 +1,42 @@
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+--- 2026-11-23T19:56:31 · pasta de dados: demo\estado
+[arranque] Perfil de Ana válido (sessão 2). A continuar onde ficou.
+
+--- Sessão 2 · Ana · Matemática ---
+[Planeador] Avanço para Funções: é o próximo tópico novo (Frações está fraco, mas esta é só a 2.ª sessão; revejo-o na sessão 3).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Funções, modo=avancar
+
+[Professor] Aula sobre Funções (tópico novo). A preparar com o modelo local...
+  Explicação: Uma função é uma relação entre dois conjuntos de números, onde cada número do
+    primeiro conjunto é associado a um único número do segundo conjunto. A fórmula de uma
+    função afim é f(x) = ax + b, onde a é a taxa de afinação e b é o valor de afinação. A
+    imagem de um objeto é o resultado da aplicação da função ao objeto, enquanto o objeto de
+    uma imagem é o resultado da aplicação da função ao resultado da imagem.
+  Exemplo resolvido: Encontre a imagem de x = 2 e a imagem de f(x) = 2x + 3 para x = -1
+  Resolução: A imagem de x = 2 é 2+3 = 5. A imagem de f(x) = 2x + 3 para x = -1 é f(-1) =
+    2(-1) + 3 = -2 + 3 = 1.
+  Agora é a tua vez.
+  Pergunta 1: Qual é o valor de a em f(x) = 2x + 5?
+  Resposta do aluno (simulado): 2
+  Pergunta 2: Qual é o valor de b em f(x) = x + 2?
+  Resposta do aluno (simulado): 2
+  [mensagem] Professor -> Avaliador · REQUEST · avaliar 2 respostas sobre Funções
+
+[Avaliador] Pergunta 1: certa
+[Avaliador] Pergunta 2: certa
+[Avaliador] Funções: novo -> improving (2/2). Perfil gravado; a próxima é a sessão 3.
+  [mensagem] Avaliador -> Planeador · INFORM · Funções: novo -> improving (2/2)
+
+Estado de Ana no fim da sessão 2:
+  Tópico                  Estado      Visto pela última vez
+  Números inteiros        solid       sessão 1
+  Frações                 weak        sessão 1
+  Equações                improving   sessão 1
+  Funções                 improving   sessão 2
+  Percentagens            -           -
+  Teorema de Pitágoras    -           -
+
+Fim da sessão 2. Próxima: sessão 3. O programa termina aqui; volta a correr `python main.py` para continuar.

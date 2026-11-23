@@ -1,0 +1,1 @@
+{"ts": "2026-11-23T19:59:23+00:00", "data_dir": "demo\\estado_testes\\modelo_inexistente", "outcome": "modelo_indisponivel", "duration_s": 1.53, "model": "modelo-que-nao-existe", "llm_calls": 0, "llm_failures": 0, "llm_seconds": 0.0}

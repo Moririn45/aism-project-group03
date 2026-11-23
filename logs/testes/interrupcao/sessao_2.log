@@ -1,0 +1,66 @@
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+--- 2026-11-23T19:58:46 · pasta de dados: demo\estado_testes\interrupcao
+[arranque] Perfil de Ana válido (sessão 2). A continuar onde ficou.
+
+--- Sessão 2 · Ana · Matemática ---
+[Planeador] Avanço para Funções: é o próximo tópico novo (Frações está fraco, mas esta é só a 2.ª sessão; revejo-o na sessão 3).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Funções, modo=avancar
+
+[Professor] Aula sobre Funções (tópico novo). A preparar com o modelo local...
+  Explicação: Uma função é uma relação entre duas quantidades, onde cada entrada (x) tem uma
+    saída (f(x)). A fórmula mais simples de função é f(x) = ax + b, onde 'a' e 'b' são
+    números reais. A imagem de um objeto é o resultado da função, enquanto o objeto de uma
+    imagem é a entrada da função.
+  Exemplo resolvido: Encontre a imagem de x = 2 quando f(x) = 2x + 1
+  Resolução: Passo 1: Substitua x = 2 na fórmula f(x) = 2x + 1. Passo 2: Calcule 2(2) + 1 =
+    5
+  Agora é a tua vez.
+  Pergunta 1: Qual é o valor de f(0) quando f(x) = x + 2?
+  Resposta do aluno (simulado): 2
+  Pergunta 2: Encontre o valor de x quando f(x) = 5 e f(x) = x - 1?
+  (o aluno simulado fecha o programa a meio da aula)
+
+[interrompido] Sessão interrompida antes do fim. O perfil não foi alterado; esta sessão repete-se na próxima execução.
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+--- 2026-11-23T19:58:57 · pasta de dados: demo\estado_testes\interrupcao
+[arranque] Perfil de Ana válido (sessão 2). A continuar onde ficou.
+
+--- Sessão 2 · Ana · Matemática ---
+[Planeador] Avanço para Funções: é o próximo tópico novo (Frações está fraco, mas esta é só a 2.ª sessão; revejo-o na sessão 3).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Funções, modo=avancar
+
+[Professor] Aula sobre Funções (tópico novo). A preparar com o modelo local...
+  Explicação: Uma função é uma relação entre duas quantidades, uma entrada (x) e uma saída
+    (ax + b). A imagem de um objeto é o resultado da aplicação da função ao objeto. Por
+    exemplo, se a função é f(x) = 2x + 1 e o objeto é 3, a imagem é f(3) = 2(3) + 1 = 7.
+  Exemplo resolvido: Encontre a imagem de f(x) = 2x + 1 se o objeto for 5.
+  Resolução: 1. Substitua x por 5 na função: f(5) = 2(5) + 1 = 10 + 1 = 11. 2. A imagem é
+    11.
+  Agora é a tua vez.
+  Pergunta 1: Qual é o valor da função f(x) = x + 2 se o objeto for 4?
+  Resposta do aluno (simulado): 6
+  Pergunta 2: Encontre a imagem de f(x) = 3x - 2 se o objeto for 1.
+  Resposta do aluno (simulado): 1
+  [mensagem] Professor -> Avaliador · REQUEST · avaliar 2 respostas sobre Funções
+
+[Avaliador] Pergunta 1: certa
+[Avaliador] Pergunta 2: certa
+[Avaliador] Funções: novo -> improving (2/2). Perfil gravado; a próxima é a sessão 3.
+  [mensagem] Avaliador -> Planeador · INFORM · Funções: novo -> improving (2/2)
+
+Estado de Ana no fim da sessão 2:
+  Tópico                  Estado      Visto pela última vez
+  Números inteiros        solid       sessão 1
+  Frações                 weak        sessão 1
+  Equações                improving   sessão 1
+  Funções                 improving   sessão 2
+  Percentagens            -           -
+  Teorema de Pitágoras    -           -
+
+Fim da sessão 2. Próxima: sessão 3. O programa termina aqui; volta a correr `python main.py` para continuar.

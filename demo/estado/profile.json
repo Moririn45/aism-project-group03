@@ -1,0 +1,193 @@
+{
+  "learner": "Ana",
+  "subject": "Matemática",
+  "subject_file": "matematica",
+  "session": 4,
+  "topics": {
+    "Números inteiros": {
+      "status": "solid",
+      "last_seen": 1
+    },
+    "Frações": {
+      "status": "improving",
+      "last_seen": 3
+    },
+    "Equações": {
+      "status": "improving",
+      "last_seen": 1
+    },
+    "Funções": {
+      "status": "improving",
+      "last_seen": 2
+    },
+    "Percentagens": {
+      "status": null,
+      "last_seen": null
+    },
+    "Teorema de Pitágoras": {
+      "status": null,
+      "last_seen": null
+    }
+  },
+  "history": [
+    {
+      "seq": 1,
+      "type": "start",
+      "ts": "2026-11-23T19:56:15+00:00",
+      "session": 1,
+      "learner": "Ana",
+      "subject": "Matemática",
+      "subject_file": "matematica",
+      "topics": [
+        "Números inteiros",
+        "Frações",
+        "Equações",
+        "Funções",
+        "Percentagens",
+        "Teorema de Pitágoras"
+      ]
+    },
+    {
+      "seq": 2,
+      "type": "diagnostic",
+      "ts": "2026-11-23T19:56:15+00:00",
+      "session": 1,
+      "results": {
+        "Números inteiros": {
+          "score": 2,
+          "of": 2,
+          "status": "solid"
+        },
+        "Frações": {
+          "score": 0,
+          "of": 2,
+          "status": "weak"
+        }
+      }
+    },
+    {
+      "seq": 3,
+      "type": "plan",
+      "ts": "2026-11-23T19:56:29+00:00",
+      "session": 1,
+      "topic": "Equações",
+      "mode": "avancar",
+      "reason": "Avanço para Equações: é o próximo tópico novo (Frações está fraco, mas esta é só a 1.ª sessão; revejo-o na sessão 3)."
+    },
+    {
+      "seq": 4,
+      "type": "assessment",
+      "ts": "2026-11-23T19:56:29+00:00",
+      "session": 1,
+      "topic": "Equações",
+      "score": 2,
+      "of": 2,
+      "old_status": null,
+      "new_status": "improving",
+      "teacher_attempts": 1,
+      "answers": [
+        {
+          "pergunta": "Qual é o valor de x em 2x - 4 = 12?",
+          "esperada": "8",
+          "dada": "8",
+          "certa": true
+        },
+        {
+          "pergunta": "Resolva a equação 2x + 1 = 9",
+          "esperada": "4",
+          "dada": "4",
+          "certa": true
+        }
+      ]
+    },
+    {
+      "seq": 5,
+      "type": "session_end",
+      "ts": "2026-11-23T19:56:29+00:00",
+      "session": 1
+    },
+    {
+      "seq": 6,
+      "type": "plan",
+      "ts": "2026-11-23T19:56:44+00:00",
+      "session": 2,
+      "topic": "Funções",
+      "mode": "avancar",
+      "reason": "Avanço para Funções: é o próximo tópico novo (Frações está fraco, mas esta é só a 2.ª sessão; revejo-o na sessão 3)."
+    },
+    {
+      "seq": 7,
+      "type": "assessment",
+      "ts": "2026-11-23T19:56:44+00:00",
+      "session": 2,
+      "topic": "Funções",
+      "score": 2,
+      "of": 2,
+      "old_status": null,
+      "new_status": "improving",
+      "teacher_attempts": 1,
+      "answers": [
+        {
+          "pergunta": "Qual é o valor de a em f(x) = 2x + 5?",
+          "esperada": "2",
+          "dada": "2",
+          "certa": true
+        },
+        {
+          "pergunta": "Qual é o valor de b em f(x) = x + 2?",
+          "esperada": "2",
+          "dada": "2",
+          "certa": true
+        }
+      ]
+    },
+    {
+      "seq": 8,
+      "type": "session_end",
+      "ts": "2026-11-23T19:56:44+00:00",
+      "session": 2
+    },
+    {
+      "seq": 9,
+      "type": "plan",
+      "ts": "2026-11-23T19:56:57+00:00",
+      "session": 3,
+      "topic": "Frações",
+      "mode": "rever",
+      "reason": "Revejo Frações: está fraco desde a sessão 1 e esta já é a 3.ª sessão (regra das 3 sessões)."
+    },
+    {
+      "seq": 10,
+      "type": "assessment",
+      "ts": "2026-11-23T19:56:57+00:00",
+      "session": 3,
+      "topic": "Frações",
+      "score": 2,
+      "of": 2,
+      "old_status": "weak",
+      "new_status": "improving",
+      "teacher_attempts": 1,
+      "answers": [
+        {
+          "pergunta": "Qual é a fração de 25 que é igual a 1?",
+          "esperada": "1",
+          "dada": "1",
+          "certa": true
+        },
+        {
+          "pergunta": "Qual é a fração de 50 que é metade?",
+          "esperada": "1/2",
+          "dada": "1/2",
+          "certa": true
+        }
+      ]
+    },
+    {
+      "seq": 11,
+      "type": "session_end",
+      "ts": "2026-11-23T19:56:57+00:00",
+      "session": 3
+    }
+  ],
+  "checksum": "sha256:607b9e7f3e10697d9788c6ebfaf19836e11317c3dfd0c437ec46348d7e7c1d4b"
+}

@@ -1,0 +1,38 @@
+{
+  "disciplina": "Matemática",
+  "nivel": "3.º ciclo do ensino básico",
+  "topicos": [
+    {
+      "nome": "Números inteiros",
+      "descricao": "operações com números inteiros relativos, positivos e negativos",
+      "diagnostico": [
+        {"enunciado": "Quanto é (-3) + 8?", "resposta": "5"},
+        {"enunciado": "Quanto é (-4) × (-6)?", "resposta": "24"}
+      ]
+    },
+    {
+      "nome": "Frações",
+      "descricao": "somar e subtrair frações e calcular a fração de uma quantidade",
+      "diagnostico": [
+        {"enunciado": "Quanto é 1/2 + 1/4? Responde com uma fração.", "resposta": "3/4"},
+        {"enunciado": "Quanto é 2/3 de 9?", "resposta": "6"}
+      ]
+    },
+    {
+      "nome": "Equações",
+      "descricao": "resolver equações do 1.º grau com uma incógnita, como 3x + 5 = 20"
+    },
+    {
+      "nome": "Funções",
+      "descricao": "funções afins f(x) = ax + b: calcular a imagem de um objeto e o objeto de uma imagem"
+    },
+    {
+      "nome": "Percentagens",
+      "descricao": "calcular percentagens de uma quantidade, descontos e aumentos"
+    },
+    {
+      "nome": "Teorema de Pitágoras",
+      "descricao": "calcular o comprimento de um lado de um triângulo retângulo"
+    }
+  ]
+}

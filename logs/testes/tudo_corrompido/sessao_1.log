@@ -1,0 +1,61 @@
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+[recuperação] profile.json inválido (JSON inválido na linha 1); isolado em profile.corrupt.json.
+[recuperação] O backup também é inválido (JSON inválido na linha 1); isolado em profile.bak.corrupt.json.
+[recuperação] Não há nada válido para recuperar: o diagnóstico vai ser repetido.
+--- 2026-11-23T19:58:33 · pasta de dados: demo\estado_testes\tudo_corrompido
+[aviso] Não foi possível recuperar o perfil: o diagnóstico vai ser repetido.
+
+[Avaliador] Diagnóstico inicial de Matemática: 4 perguntas curtas.
+  Pergunta 1 (Números inteiros): Quanto é (-3) + 8?
+  Resposta do aluno (simulado): 5
+[Avaliador] Pergunta 1: certa
+  Pergunta 2 (Números inteiros): Quanto é (-4) × (-6)?
+  Resposta do aluno (simulado): 24
+[Avaliador] Pergunta 2: certa
+  Pergunta 3 (Frações): Quanto é 1/2 + 1/4? Responde com uma fração.
+  Resposta do aluno (simulado): 7/4
+[Avaliador] Pergunta 3: errada (resposta certa: 3/4)
+  Pergunta 4 (Frações): Quanto é 2/3 de 9?
+  Resposta do aluno (simulado): 7
+[Avaliador] Pergunta 4: errada (resposta certa: 6)
+[Avaliador] Resultado do diagnóstico: Números inteiros 2/2 -> solid; Frações 0/2 -> weak. Perfil criado e gravado.
+[recuperação] O journal não batia certo com o perfil; isolado em history.corrupt.jsonl e reescrito.
+
+--- Sessão 1 · Ana · Matemática ---
+[Planeador] Avanço para Equações: é o próximo tópico novo (Frações está fraco, mas esta é só a 1.ª sessão; revejo-o na sessão 3).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Equações, modo=avancar
+
+[Professor] Aula sobre Equações (tópico novo). A preparar com o modelo local...
+  Explicação: Uma equação é uma expressão matemática que consiste em um valor igual a outra
+    expressão. Para resolver uma equação do 1º grau com uma incógnita, devemos isolar a
+    incógnita. Por exemplo, na equação 3x + 5 = 20, podemos começar a resolver pela
+    subtração de 5 de ambos os lados, o que nos dá 3x = 15. Em seguida, podemos dividir
+    ambos os lados pela 3, o que nos dá x = 5.
+  Exemplo resolvido: Resolva a equação 2x + 2 = 8
+  Resolução: Passo a passo: 1) Subtraia 2 de ambos os lados: 2x = 6. 2) Divida ambos os
+    lados pela 2: x = 3
+  Agora é a tua vez.
+  Pergunta 1: Qual é o valor de x na equação x - 1 = 4?
+  Resposta do aluno (simulado): 3
+  Pergunta 2: Resolva a equação 5x = 25
+  Resposta do aluno (simulado): 5
+  [mensagem] Professor -> Avaliador · REQUEST · avaliar 2 respostas sobre Equações
+
+[Avaliador] Pergunta 1: certa
+[Avaliador] Pergunta 2: certa
+[Avaliador] Equações: novo -> improving (2/2). Perfil gravado; a próxima é a sessão 2.
+  [mensagem] Avaliador -> Planeador · INFORM · Equações: novo -> improving (2/2)
+
+Estado de Ana no fim da sessão 1:
+  Tópico                  Estado      Visto pela última vez
+  Números inteiros        solid       sessão 1
+  Frações                 weak        sessão 1
+  Equações                improving   sessão 1
+  Funções                 -           -
+  Percentagens            -           -
+  Teorema de Pitágoras    -           -
+
+Fim da sessão 1. Próxima: sessão 2. O programa termina aqui; volta a correr `python main.py` para continuar.

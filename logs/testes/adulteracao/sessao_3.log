@@ -1,0 +1,44 @@
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+[recuperação] profile.json inválido (o checksum não corresponde ao conteúdo (ficheiro adulterado ou corrompido)); isolado em profile.corrupt.json.
+[recuperação] Restaurado o último backup válido (profile.bak.json, sessão 2).
+[recuperação] Repostos 3 eventos do journal que o backup ainda não tinha (o perfil ficou em dia: sessão 3).
+--- 2026-11-23T19:57:49 · pasta de dados: demo\estado_testes\adulteracao
+[arranque] Perfil de Ana válido (sessão 3). A continuar onde ficou.
+
+--- Sessão 3 · Ana · Matemática ---
+[Planeador] Revejo Frações: está fraco desde a sessão 1 e esta já é a 3.ª sessão (regra das 3 sessões).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Frações, modo=rever
+
+[Professor] Aula sobre Frações (revisão). A preparar com o modelo local...
+  Explicação: Uma fração é uma parte de um todo. Para sumar ou subtrair frações, temos que
+    ter o mesmo denominador. Para calcular a fração de uma quantidade, basta dividir a
+    quantidade por 100, se for por cento, ou dividir por 1 se for por parte.
+  Exemplo resolvido: Somar 1/4 e 1/6
+  Resolução: Primeiro, encontrem o mínimo comum múltiplo (MCM) de 4 e 6, que é 12. Em
+    seguida, multipliquem cada fração pelo MCM: (1/4) x 12/12 = 3/12 e (1/6) x 12/12 = 2/12.
+    Agora, somem: 3/12 + 2/12 = 5/12.
+  Agora é a tua vez.
+  Pergunta 1: Qual é o resultado de sumar 1/2 e 1/4?
+  Resposta do aluno (simulado): 5/4
+  Pergunta 2: Qual é a fração de 25%?
+  Resposta do aluno (simulado): 1/4
+  [mensagem] Professor -> Avaliador · REQUEST · avaliar 2 respostas sobre Frações
+
+[Avaliador] Pergunta 1: certa
+[Avaliador] Pergunta 2: certa
+[Avaliador] Frações: weak -> improving (2/2). Perfil gravado; a próxima é a sessão 4.
+  [mensagem] Avaliador -> Planeador · INFORM · Frações: weak -> improving (2/2)
+
+Estado de Ana no fim da sessão 3:
+  Tópico                  Estado      Visto pela última vez
+  Números inteiros        solid       sessão 1
+  Frações                 improving   sessão 3
+  Equações                improving   sessão 1
+  Funções                 improving   sessão 2
+  Percentagens            -           -
+  Teorema de Pitágoras    -           -
+
+Fim da sessão 3. Próxima: sessão 4. O programa termina aqui; volta a correr `python main.py` para continuar.

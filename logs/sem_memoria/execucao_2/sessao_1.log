@@ -1,0 +1,57 @@
+========================================================================
+Tutor Curricular Pessoal com Memória Persistente
+========================================================================
+[arranque] Modelo local: llama3.2 (Ollama).
+--- 2026-11-23T19:57:11 · pasta de dados: demo\estado_testes\sem_memoria
+[arranque] Não há perfil guardado: aluno novo.
+
+[Avaliador] Diagnóstico inicial de Matemática: 4 perguntas curtas.
+  Pergunta 1 (Números inteiros): Quanto é (-3) + 8?
+  Resposta do aluno (simulado): 5
+[Avaliador] Pergunta 1: certa
+  Pergunta 2 (Números inteiros): Quanto é (-4) × (-6)?
+  Resposta do aluno (simulado): 24
+[Avaliador] Pergunta 2: certa
+  Pergunta 3 (Frações): Quanto é 1/2 + 1/4? Responde com uma fração.
+  Resposta do aluno (simulado): 7/4
+[Avaliador] Pergunta 3: errada (resposta certa: 3/4)
+  Pergunta 4 (Frações): Quanto é 2/3 de 9?
+  Resposta do aluno (simulado): 7
+[Avaliador] Pergunta 4: errada (resposta certa: 6)
+[Avaliador] Resultado do diagnóstico: Números inteiros 2/2 -> solid; Frações 0/2 -> weak. Perfil criado e gravado.
+
+--- Sessão 1 · Ana · Matemática ---
+[Planeador] Avanço para Equações: é o próximo tópico novo (Frações está fraco, mas esta é só a 1.ª sessão; revejo-o na sessão 3).
+  [mensagem] Planeador -> Professor · INFORM · tópico=Equações, modo=avancar
+
+[Professor] Aula sobre Equações (tópico novo). A preparar com o modelo local...
+  Explicação: Uma equação é uma igualdade entre duas expressões. Para resolver uma equação
+    do 1.º grau com uma incógnita, temos que isolar a incógnita. Em outras palavras, temos
+    que fazer com que a incógnita esteja sozinha do outro lado da igualdade. Neste caso,
+    temos 3x + 5 = 20. Primeiro, subtraimos 5 de ambos os lados, o que nos dá 3x = 15. Em
+    seguida, dividimos ambos os lados por 3, o que nos dá x = 5.
+  Exemplo resolvido: Resolva 2x + 4 = 12
+  Resolução: Passo 1: Subtrair 4 de ambos os lados, o que nos dá 2x = 8. Passo 2: Dividir
+    ambos os lados por 2, o que nos dá x = 4.
+  Agora é a tua vez.
+  Pergunta 1: Qual é o valor de x em 2x - 1 = 9?
+  Resposta do aluno (simulado): 8
+  Pergunta 2: Se resolver 5x = 25, qual é o valor de x?
+  Resposta do aluno (simulado): 5
+  [mensagem] Professor -> Avaliador · REQUEST · avaliar 2 respostas sobre Equações
+
+[Avaliador] Pergunta 1: certa
+[Avaliador] Pergunta 2: certa
+[Avaliador] Equações: novo -> improving (2/2). Perfil gravado; a próxima é a sessão 2.
+  [mensagem] Avaliador -> Planeador · INFORM · Equações: novo -> improving (2/2)
+
+Estado de Ana no fim da sessão 1:
+  Tópico                  Estado      Visto pela última vez
+  Números inteiros        solid       sessão 1
+  Frações                 weak        sessão 1
+  Equações                improving   sessão 1
+  Funções                 -           -
+  Percentagens            -           -
+  Teorema de Pitágoras    -           -
+
+Fim da sessão 1. Próxima: sessão 2. O programa termina aqui; volta a correr `python main.py` para continuar.
